@@ -6,21 +6,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
+    
     private Rigidbody _rigidbody;
+    private GameObject focalPoint;
 
-    public float speed = 50.0f;
+    public float speed = 5.0f;
 
      void Start()
     {
         _rigidbody = GetComponentInChildren<Rigidbody>();
+        focalPoint = GameObject.Find("Focal Point");
     }
 
      void Update()
     {
         float forwardInput = Input.GetAxis("Vertical");
 
-        _rigidbody.AddForce(Vector3.forward * forwardInput *speed );
+        _rigidbody.AddForce(focalPoint.transform.forward * forwardInput *speed );
     }
 
 }

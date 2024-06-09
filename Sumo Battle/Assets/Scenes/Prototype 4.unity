@@ -213,7 +213,7 @@ GameObject:
   m_Layer: 0
   m_Name: Focal Point
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -557,7 +557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9df20bfd3c6ad8428c3b6458ace35ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 2001957452}
   speed: 5
 --- !u!1 &2001957447
 GameObject:

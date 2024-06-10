@@ -11,10 +11,11 @@ public class PlayerController : MonoBehaviour
     private GameObject focalPoint;
 
     public float speed = 5.0f;
+    public bool hasPowerup;
 
      void Start()
     {
-        _rigidbody = GetComponentInChildren<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
         focalPoint = GameObject.Find("Focal Point");
     }
 
@@ -25,4 +26,13 @@ public class PlayerController : MonoBehaviour
         _rigidbody.AddForce(focalPoint.transform.forward * forwardInput *speed );
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PowerUp"))
+        {
+            hasPowerup = true;
+            Debug.Log("Destroy");
+            Destroy(other.gameObject);
+        }
+    }
 }

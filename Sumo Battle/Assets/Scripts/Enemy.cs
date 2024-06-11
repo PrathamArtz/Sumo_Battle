@@ -19,5 +19,10 @@ public class Enemy : MonoBehaviour
     {
         Vector3 lookdirection = (player.transform.position - transform.position).normalized;
         rb.AddForce( lookdirection * speed);
+
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    
+    [Header("Prefab")]
+   
     public GameObject enemyPrefab;
     public GameObject powerUpPrefab;
+
+    [Space(20)]
+
     public int enemyCount;
     public int wavNumber = 1;
     private float spawnrange = 9.0f;
 
+    
     void Start()
     {
         SpawnEnemyWave(wavNumber);
